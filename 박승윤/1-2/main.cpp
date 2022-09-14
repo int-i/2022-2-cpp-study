@@ -1,5 +1,4 @@
 	#include <iostream>
-	using std::cin;
 	using namespace std;
 
 	int main()
