@@ -22,5 +22,6 @@ int main() {
 
 void calculator(int chessPieces[NumberOfMember]) {
 	// TODO: 여기에 문제 풀이 작성
+	// Hint: for문, if문 쓸 필요 없이 출력문과 간단한 사칙연산 기호만으로도 문제를 해결 할 수 있다.
 }
 
