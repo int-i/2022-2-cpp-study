@@ -30,4 +30,5 @@ int main()
 		sum = sum + joojak[i];
 	}
 	cout << sum/subject;
+	return 0;
 }

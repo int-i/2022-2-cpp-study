@@ -14,6 +14,7 @@ int main()
 
 	}
 	calculator(chesspiece);
+	return 0;
 }
 
 void calculator(int chesspiece[NumberOfMember])
