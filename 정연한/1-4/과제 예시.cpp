@@ -1,25 +1,28 @@
 #include <iostream>
+#include <vector>
 using std::cin;
 using std::cout;
-using std::endl;
+constexpr auto endl{ '\n' };
 
-using std::string;
+using std::vector;
 
-string classification(string[]);
+constexpr auto NumberOfMember{ 6 };
 
-int main() {
-	string members[10000];
-	int N = 0; cin >> N;
+auto main() -> int {
+	cin.tie(nullptr)->sync_with_stdio(false);
+	vector<int> chessPieces(NumberOfMember);
 
-	for (int i = 0; i < N; ++i)
-		cin >> members[i];
+	for (auto& elem : chessPieces)
+		cin >> elem;
 
-	classification(members);
+	[](vector<int> chessPieces) {
+		cout << 1 - chessPieces[0] << endl
+			<< 1 - chessPieces[1] << endl
+			<< 2 - chessPieces[2] << endl
+			<< 2 - chessPieces[3] << endl
+			<< 2 - chessPieces[4] << endl
+			<< 8 - chessPieces[5] << endl;
+	}(chessPieces);
 
 	return 0;
 }
-
-string classification(string members[]) {
-	// TODO: 여기에 럭비 클럽 문제 풀이 작성
-}
-
