@@ -14,11 +14,10 @@ int main() {
 		if (array[i] > max) {
 			max = array[i];
 		}
-		sum += array[i];
+		sum += array[i] / max * 100;
 	}
-	sum = (sum / max * 100) / number;
 
-	cout << sum;
+	cout << sum / number;
 
 	return 0;
 }
