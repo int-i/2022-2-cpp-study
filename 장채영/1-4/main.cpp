@@ -8,7 +8,6 @@
 	// 반환값이 없고, int 배열을 인자로 받는 함수
 	// 배열에 대한 설명은 여기 참조
 	// https://boycoding.tistory.com/193
-	void calculator(int[NumberOfMember]);
 
 	int main() {
 		int chessPieces[NumberOfMember] = { };
