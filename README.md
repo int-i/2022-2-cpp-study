@@ -35,4 +35,4 @@
 
 ### 심화 5강: 다형성
 - 도형의 크기를 계산하는 클래스를 다형성을 통해 구현해 볼 것
-- ex) class 직사각형 : 도형 { public: int 크기계산() { return get가로() * get세로(); } };
+- ex) class 직사각형 : 도형 { public: int 크기계산() override { return get가로() * get세로(); } };
