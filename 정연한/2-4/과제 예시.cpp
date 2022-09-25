@@ -57,6 +57,7 @@ int main() {
 	String str2{ "ÇÏ¼¼¿ä" };
 
 	cout << str + str2 << endl;
+	cout << String{ "he" } + String{ "llo" } << endl;
 	return 0;
 }
 
