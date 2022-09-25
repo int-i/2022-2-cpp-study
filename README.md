@@ -35,7 +35,7 @@
 
 ### 심화 5강: 다형성
 - 과제: 도형의 크기를 계산하는 클래스를 다형성을 통해 구현해 볼 것
-- ex) class 직사각형 : 도형 { public: int 크기계산() override { return get가로() * get세로(); } };
+- ex) class 직사각형 : public 도형 { public: int 크기계산() override { return get가로() * get세로(); } };
 
 ### 자료구조 1강: 자료구조와 시간 복잡도
 - 과제: 주어진 코드를 읽어보고 코드 중 158번째 줄의 temp 변수에 들어가는 testArray의 인덱스 값을
