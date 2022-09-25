@@ -19,10 +19,6 @@ public:
 			value[i] = str[i];
 	}
 
-	auto& getString() {
-		return value;
-	}
-
 	auto operator+(String str) {
 		// length - 1 부분에서 -1을 해주는 이유:
 		// 기본적으로 문자열의 끝에는 \0이 있기 때문에,
