@@ -107,9 +107,9 @@ int main() {
 
 	// 템플릿으로 구현 된 클래스나 함수에서,
 	// 꺾쇠 괄호 안에 넣는 인자를 템플릿 인자라고 한다.
-	// 아래는 int와 10을 넣었는데,
-	// 이 경우 int를 요소로 가지고, 크기가 10인 배열을 선언하게 된다.
-	// 배열 선언자와는 비슷하면서도 다르다.
+	// 아래는 int와 5을 넣었는데,
+	// 이 경우 int를 요소로 가지고, 크기가 5인 배열을 선언하게 된다.
+	// 배열 선언자[]와는 비슷하면서도 다르다.
 	// 기본적으로는 이렇게 초기화 리스트 방식을 사용해 초기화를 한다.
 	array<int, 5> arr1 = { 1, 2, 3, 4, 5 };
 
@@ -131,7 +131,7 @@ int main() {
 
 	cout << "testArray 초기화 완료" << endl << endl;
 
-	// 이렇게 선언된 배열은 배열 선언자를 통해 선언 된 배열과 동일하게 사용할 수 있다.
+	// 이렇게 선언된 배열은 배열 선언자[]를 통해 선언 된 배열과 동일하게 사용할 수 있다.
 
 
 	// 배열의 여러 연산들의 시간복잡도를 알아보자.
@@ -161,7 +161,7 @@ int main() {
 	// find 함수: testArray의 가장 첫번째 원소부터 끝 원소까지 temp 값이 존재하는지 탐색
 	// 존재한다면 해당 위치의 iterator를 반환
 	auto location{ find(testArray.begin(), testArray.end(), temp) };
-	// distance 함수: testArray.의 가장 첫번째 원소부터 위에서 찾은 위치까지의 거리를 반환
+	// distance 함수: testArray의 가장 첫번째 원소부터 위에서 찾은 위치까지의 거리를 반환
 	cout << "testArray에 temp값이 어디에 존재하는가: " << distance(testArray.begin(), location) << endl;
 	end = system_clock::now();
 
