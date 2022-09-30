@@ -41,9 +41,9 @@ T Stack<T>::Pop() {
 	T data{ head->data };
 
 	if (head == tail) { // 데이터가 하나일때
+		delete head;
 		head = nullptr;
 		tail = nullptr;
-		delete head;
 	}
 	else { // 데이터가 하나가 아니면
 		while (ptr != nullptr) { // tail(top)값 삭제 후 새 tail 대입
@@ -57,7 +57,6 @@ T Stack<T>::Pop() {
 			}
 			ptr = ptr->next;
 		}
-		return data; // 제거된 요소의 데이터 반환
 	}
-	return data;
+	return data; // 제거된 요소의 데이터 반환
 }
