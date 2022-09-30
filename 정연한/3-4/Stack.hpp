@@ -21,13 +21,16 @@ void Stack<T>::Push(T data) {
 	Node<T>* node{ new Node<T> };
 	node->data = data;
 
-	// 만약 head 포인터가 비어있으면 새 노드 지정
+	// 만약 이 스택이 비어있으면 새 노드 지정
 	if (isEmpty()) {
 		head = node;
 		tail = node;
 	}
 	else {
+		// 기존의 tail의 next 포인터가 nullptr 가리키고 있었는데,
+		// 그것을 새 노드를 가리키게끔 변경
 		tail->next = node;
+		// tail이 tail의 next가 가리키던 노드를 가리키게끔 변경
 		tail = tail->next;
 	}
 }
@@ -41,6 +44,8 @@ T Stack<T>::Pop() {
 	T data{ head->data };
 
 	if (head == tail) { // 데이터가 하나일때
+		// head와 tail이 같은 노드를 가리키고 있었기 때문에,
+		// delete head로 tail 역시 지워진 노드를 가리키게 된다.
 		delete head;
 		head = nullptr;
 		tail = nullptr;
